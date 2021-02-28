@@ -1,4 +1,4 @@
-###### django project utilizing docker
+# django project utilizing docker
 
 ## This is a practice project
 
