@@ -6,16 +6,16 @@ version: "3.9"
 services:
   db:
     image: postgres
-    environment: 
+    environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
   web:
-    build: .
+    build: . # web service image doesn't exist yet so make one
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:8000"
-    depends_on: :
+    depends_on:
       - db
